@@ -217,10 +217,9 @@
     
     "variables": {
         "baseUrl" : "https://raw.githubusercontent.com/freakydummy/POC_FW/main",
-        "deployLoadBalancerURL": "[concat(variables('baseUrl'),'/deployLoadBalancer.json')]",
-        "appInsightsUrl": "[concat(variables('baseUrl'),'/deployAppInsights.json')]",
+        "deployLoadBalancerURL": "https://www.dropbox.com/s/tbdei1s6mu0m3wi/deployLoadBalancer.json?dl=0",
+        "appInsightsUrl": "https://www.dropbox.com/s/6qj5nf6lg0sccmw/vmseries.json?dl=0",
         "vmseriesURL" : "[concat(variables('baseUrl'),'/vmseries.json')]",
-
         "networkApiVersion": "2017-06-01",
         "computeApiVersion": "2017-03-30",
         "appInsightsApiVersion": "2018-05-01", 
@@ -403,6 +402,9 @@
                     },
                     "vmLicenseHandlerUrl": {
                         "value": "[parameters('panoramaPluginMessageHandlerUrl')]"
+                    },
+                    "virtualNetworkRG": {
+                        "value": "[variables('virtualNetworkResourceGroup')]"
                     }
                 }
             }
