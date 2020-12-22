@@ -216,7 +216,7 @@
     },
     
     "variables": {
-        "baseUrl" : "https://raw.githubusercontent.com/PaloAltoNetworks/azure-autoscaling/master/Version-1-1/hub",
+        "baseUrl" : "https://raw.githubusercontent.com/freakydummy/POC_FW/main",
         "deployLoadBalancerURL": "[concat(variables('baseUrl'),'/deployLoadBalancer.json')]",
         "appInsightsUrl": "[concat(variables('baseUrl'),'/deployAppInsights.json')]",
         "vmseriesURL" : "[concat(variables('baseUrl'),'/vmseries.json')]",
