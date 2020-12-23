@@ -58,7 +58,6 @@
 	},
 
 	"variables": {
-		"vnetId": "[resourceId(parameters('virtualNetworkResourceGroup'), 'Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]",
 		"lbId": "[resourceId('Microsoft.Network/loadBalancers/', parameters('loadBalancerName'))]"
 	},
 
@@ -81,7 +80,7 @@
 						"name": "Frontend",
 						"properties": {
 							"subnet": {
-								"id": "[concat(variables('vnetId'),'/subnets/',parameters ('trustedSubnetName'))]"
+								"id": "[resourceId(parameters('virtualNetworkResourceGroup'), 'Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('trustedSubnetName'))]"
 							},
 							"privateIPAllocationMethod": "Static",
 							"privateIPAddress": "[parameters('loadBalancerIP')]" 
