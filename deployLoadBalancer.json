@@ -25,7 +25,13 @@
 				"description": "Name of the Virtual Network (VNET)"
 			}
 		},
-		"subnetName": {
+		"virtualNetworkResourceGroup": {
+            "type": "string",
+            "metadata": {
+              "description": "Resource Group VNET is deployed in"
+            }
+        },
+		"trustedSubnetName": {
 			"type": "string",
 			"metadata": {
 				"description": "Name of the subnet"
@@ -75,7 +81,7 @@
 						"name": "Frontend",
 						"properties": {
 							"subnet": {
-								"id": "[concat(variables('vnetId'),'/subnets/',parameters ('subnetName'))]"
+								"id": "[concat(variables('vnetId'),'/subnets/',parameters ('trustedSubnetName'))]"
 							},
 							"privateIPAllocationMethod": "Static",
 							"privateIPAddress": "[parameters('loadBalancerIP')]" 
