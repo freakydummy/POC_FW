@@ -217,9 +217,9 @@
     
     "variables": {
         "baseUrl": "https://raw.githubusercontent.com/PaloAltoNetworks/azure-autoscaling/master/Version-1-1/hub",
-        "deployLoadBalancerURL": "https://www.dropbox.com/s/tbdei1s6mu0m3wi/deployLoadBalancer.json?dl=0",
+        "deployLoadBalancerURL": "https://raw.githubusercontent.com/freakydummy/POC_FW/main/deployLoadBalancer.json",
         "appInsightsUrl": "[concat(variables('baseUrl'),'/deployAppInsights.json')]",
-        "vmseriesURL": "https://www.dropbox.com/s/6qj5nf6lg0sccmw/vmseries.json?dl=0",
+        "vmseriesURL": "https://raw.githubusercontent.com/freakydummy/POC_FW/main/vmseries.json",
         "networkApiVersion": "2017-06-01",
         "computeApiVersion": "2017-03-30",
         "appInsightsApiVersion": "2018-05-01", 
