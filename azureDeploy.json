@@ -311,9 +311,6 @@
                     "virtualNetworkName": {
                         "value": "[parameters('virtualNetworkName')]"
                     },
-                    "subnetName": {
-                        "value": "[parameters('trustedSubnetName')]"
-                    },
                     "loadBalancerName": {
                         "value": "[variables('loadBalancerName')]"
                     },
@@ -326,14 +323,8 @@
                     "virtualNetworkResourceGroup": {
                         "value": "[parameters('virtualNetworkResourceGroup')]"
                     },
-                    "MgmtSubnetName": {
-                        "value": "[variables('MgmtSubnetName')]"
-                    },
-                    "untrustedSubnetName": {
-                        "value": "[parameters('untrustedSubnetName')]"
-                    },
                     "trustedSubnetName": {
-                        "value": "[variables('fwLbBePoolName')]"
+                        "value": "[parameters('trustedSubnetName')]"
                     }
                 }
             }
@@ -407,13 +398,13 @@
                         "value": "[parameters('virtualNetworkResourceGroup')]"
                     },
                     "MgmtSubnetName": {
-                        "value": "[variables('MgmtSubnetName')]"
+                        "value": "[parameters('MgmtSubnetName')]"
                     },
                     "untrustedSubnetName": {
                         "value": "[parameters('untrustedSubnetName')]"
                     },
                     "trustedSubnetName": {
-                        "value": "[variables('fwLbBePoolName')]"
+                        "value": "[parameters('trustedSubnetName')]"
                     }
                 }
             }
