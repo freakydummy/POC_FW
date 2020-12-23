@@ -96,19 +96,19 @@
                 "description": "VNET name"
             }
         },
-        "subnetNameMgmt": {
+        "MgmtSubnetName": {
             "type": "string",
             "metadata": {
                 "description": "Management Subnet name"
             }
         },
-        "subnetNameUntrust": {
+        "untrustedSubnetName": {
             "type": "string",
             "metadata": {
                 "description": "Untrust Subnet name"
             }
         },
-        "subnetNameTrust": {
+        "trustedSubnetName": {
             "type": "string",
             "metadata": {
                 "description": "Trust Subnet name"
@@ -280,7 +280,7 @@
                                     "name": "[variables('ipConfigNamemgmt')]",
                                     "properties": {
                                         "subnet": {
-                                            "id": "[resourceId(parameters('virtualNetworkRG'), 'Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnetNameMgmt'))]"
+                                            "id": "[resourceId(parameters('virtualNetworkResourceGroup'), 'Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('MgmtSubnetName'))]"
                                         },
                                         "publicIPAddressConfiguration": {
                                             "name": "pavm_pip",
@@ -302,7 +302,7 @@
                                     "name": "[variables('ipConfigNameuntrust')]",
                                     "properties": {
                                         "subnet": {
-                                            "id": "[resourceId(parameters('virtualNetworkRG'), 'Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnetNameUntrust'))]"
+                                            "id": "[resourceId(parameters('virtualNetworkResourceGroup'), 'Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('untrustedSubnetName'))]"
                                         },
                                         "publicIPAddressConfiguration": {
                                             "name": "hub_pavm_pip",
@@ -328,7 +328,7 @@
                                             "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', parameters('fwLbBePoolName'))]"
                                         }],
                                         "subnet": {
-                                            "id": "[resourceId(parameters('virtualNetworkRG'), 'Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnetNameTrust'))]"
+                                            "id": "[resourceId(parameters('virtualNetworkResourceGroup'), 'Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('trustedSubnetName'))]"
                                         }
                                     }
                                 }]
