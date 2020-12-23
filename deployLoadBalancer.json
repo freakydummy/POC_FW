@@ -19,13 +19,6 @@
 				"description": "Deployment location"
 			}
 		},
-
-		"virtualNetworkRG": {
-			"type": "string",
-			"metadata": {
-				"description": "Name of the Virtual Network Resource Group"
-			}
-		},
 		"virtualNetworkName": {
 			"type": "string",
 			"metadata": {
@@ -59,7 +52,7 @@
 	},
 
 	"variables": {
-		"vnetId": "[resourceId(parameters('virtualNetworkRG'), 'Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]",
+		"vnetId": "[resourceId(parameters('virtualNetworkResourceGroup'), 'Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]",
 		"lbId": "[resourceId('Microsoft.Network/loadBalancers/', parameters('loadBalancerName'))]"
 	},
 
