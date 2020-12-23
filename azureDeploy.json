@@ -309,7 +309,7 @@
                         "value": "[variables('location')]"
                     },
                     "virtualNetworkRG": {
-                        "value": "[variables('virtualNetworkResourceGroup')]"
+                        "value": "[parameters('virtualNetworkResourceGroup')]"
                     },
                     "virtualNetworkName": {
                         "value": "[parameters('virtualNetworkName')]"
