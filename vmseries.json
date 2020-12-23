@@ -90,6 +90,12 @@
                 "description": "Credentials required by the firewall VM bootstrap code to access the storage"
             }
         },
+        "virtualNetworkResourceGroup": {
+            "type": "string",
+            "metadata": {
+              "description": "Resource Group VNET is deployed in"
+            }
+        },
         "virtualNetworkName": {
             "type": "string",
             "metadata": {
