@@ -315,7 +315,7 @@
                         "value": "[parameters('virtualNetworkName')]"
                     },
                     "subnetName": {
-                        "value": "[variables('trustedSubnetName')]"
+                        "value": "[parameters('trustedSubnetName')]"
                     },
                     "loadBalancerName": {
                         "value": "[variables('loadBalancerName')]"
