@@ -216,10 +216,10 @@
     },
     
     "variables": {
-        "baseUrl" : "https://raw.githubusercontent.com/freakydummy/POC_FW/main",
+        "baseUrl": "https://raw.githubusercontent.com/PaloAltoNetworks/azure-autoscaling/master/Version-1-1/hub",
         "deployLoadBalancerURL": "https://www.dropbox.com/s/tbdei1s6mu0m3wi/deployLoadBalancer.json?dl=0",
-        "appInsightsUrl": "https://www.dropbox.com/s/6qj5nf6lg0sccmw/vmseries.json?dl=0",
-        "vmseriesURL" : "[concat(variables('baseUrl'),'/vmseries.json')]",
+        "appInsightsUrl": "[concat(variables('baseUrl'),'/deployAppInsights.json')]",
+        "vmseriesURL": "https://www.dropbox.com/s/6qj5nf6lg0sccmw/vmseries.json?dl=0",
         "networkApiVersion": "2017-06-01",
         "computeApiVersion": "2017-03-30",
         "appInsightsApiVersion": "2018-05-01", 
@@ -307,10 +307,7 @@
                     },
                     "location": {
                         "value": "[variables('location')]"
-                    },
-                    "virtualNetworkRG": {
-                        "value": "[parameters('virtualNetworkResourceGroup')]"
-                    },
+                    },                 
                     "virtualNetworkName": {
                         "value": "[parameters('virtualNetworkName')]"
                     },
@@ -373,15 +370,6 @@
                     "virtualNetworkName": {
                          "value": "[parameters('virtualNetworkName')]"
                     },
-                    "subnetNameMgmt": {
-                        "value": "[variables('MgmtSubnetName')]"
-                    },
-                    "subnetNameUntrust": {
-                        "value": "[variables('untrustedSubnetName')]"
-                    },
-                    "subnetNameTrust": {
-                        "value": "[variables('trustedSubnetName')]"
-                    },
                     "fwLbName": {
                         "value": "[variables('loadBalancerName')]"
                     },
@@ -402,9 +390,6 @@
                     },
                     "vmLicenseHandlerUrl": {
                         "value": "[parameters('panoramaPluginMessageHandlerUrl')]"
-                    },
-                    "virtualNetworkRG": {
-                        "value": "[variables('virtualNetworkResourceGroup')]"
                     }
                 }
             }
@@ -416,15 +401,15 @@
             "type": "string"
         },
         "HubFwMgmtSubnetName": {
-            "value": "[variables('MgmtSubnetName')]",
+            "value": "[parameters('MgmtSubnetName')]",
             "type": "string"
         },
         "HubFwUntrustSubnetName": {
-            "value": "[variables('untrustedSubnetName')]",
+            "value": "[parameters('untrustedSubnetName')]",
             "type": "string"
         },
         "HubFwTrustSubnetName": {
-            "value": "[variables('trustedSubnetName')]",
+            "value": "[parameters('trustedSubnetName')]",
             "type": "string"
         },
         "HubFwLoadBalancerIP": {
