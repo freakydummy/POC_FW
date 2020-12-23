@@ -322,6 +322,18 @@
                     },
                     "fwLbBePoolName": {
                         "value": "[variables('fwLbBePoolName')]"
+                    },
+                    "virtualNetworkResourceGroup": {
+                        "value": "[parameters('virtualNetworkResourceGroup')]"
+                    },
+                    "MgmtSubnetName": {
+                        "value": "[variables('MgmtSubnetName')]"
+                    },
+                    "untrustedSubnetName": {
+                        "value": "[parameters('untrustedSubnetName')]"
+                    },
+                    "trustedSubnetName": {
+                        "value": "[variables('fwLbBePoolName')]"
                     }
                 }
             }
@@ -390,6 +402,18 @@
                     },
                     "vmLicenseHandlerUrl": {
                         "value": "[parameters('panoramaPluginMessageHandlerUrl')]"
+                    },
+                    "virtualNetworkResourceGroup": {
+                        "value": "[parameters('virtualNetworkResourceGroup')]"
+                    },
+                    "MgmtSubnetName": {
+                        "value": "[variables('MgmtSubnetName')]"
+                    },
+                    "untrustedSubnetName": {
+                        "value": "[parameters('untrustedSubnetName')]"
+                    },
+                    "trustedSubnetName": {
+                        "value": "[variables('fwLbBePoolName')]"
                     }
                 }
             }
